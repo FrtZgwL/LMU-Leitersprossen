@@ -1,0 +1,117 @@
+% Lügen und und durch Fiktion - Cedric Tonye-Djon
+
+% Grundeinstellungen, Formatierung, Ränder, Schrift, Zitierstil, usw.
+\documentclass[fontsize=12pt, paper=a4, headings=standardclasses, parskip=half, bibliography=numbered]{scrartcl}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage[rm]{libertine}
+\usepackage[english,german,main=ngerman]{babel}
+\usepackage[autostyle=true,german=quotes,autopunct=true]{csquotes}
+\usepackage[backend=biber,style=authoryear,autocite=footnote]{biblatex}
+\addbibresource{/Users/cedrictonyedjon/OneDrive - bwedu/Zotero/Meine Bibliothek.bib}
+\deffootnote{1.5em}{1em}{%
+  \makebox[1.5em][l]{\thefootnotemark}%
+}
+\usepackage{fnpct}
+\AtBeginEnvironment{quote}{\small}
+
+\makeatletter
+\newcommand{\claim}{%
+  \@startsection{paragraph}{4}%
+  {\z@}{0em \@plus 1ex \@minus .2ex}{-1em}%
+  {\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+  % Gerstorfers Zeug, von dem ich nicht weiß, wozu es gut ist
+\usepackage[unicode=true,pdfborder={0 0 0},hyperfootnotes=false]{hyperref}
+\usepackage{bookmark}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+% Deckblatt
+\begin{titlepage}
+Universität Stuttgart\\
+Institut für Philosophie\\
+Seminar\\
+DozentIn\\\\
+Modul\\
+Seiten (1 Normseite = 1800 Zeichen)\\
+Gefordert waren Geforderte Seiten Seiten\\
+\vfill
+\begin{center}
+  \Huge 4 Lose Leitersprossen
+  \large Gelingt Wittgensteins \emph{Tractatus logico-philosophicus} als Kriterium von Unsinn?
+\end{center}
+\vfill
+% Cedric Tonye-Djon\\
+Matrikelnummer: 3224391\\
+cedric.tonyedjon@gmail.com\\
+1-Fach-Bachelor Philosophie\\
+Semester. Fachsemester
+\end{titlepage}
+
+%Inhaltsverzeichnis
+\tableofcontents
+\clearpage
+
+
+\section{Offene Fragen}
+
+\begin{enumerate}
+  \item Ist "Kriterium" das richtige Wort?
+\end{enumerate}
+
+\section{Einleitung}
+
+Besonders in der Philosophie drehen sich Debatten häufig darum, ob gewisse Formulierungen überhaupt sinnvolle Sprache, oder ob sie nichts weiter als Geräusche, Tintenkleckse, leuchtende Pixel, Unsinn sind. \textbf{Das ist relevant, weil der Nachweis von Unsinnigkeit eine philosophische Position als solche widerlegt.} Ludwig Wittgenstein versucht mit dem \emph{Tractatus logico-philosophicus} (im Folgenden TLP) unter anderem ein allgemeines Kriterium für Unsinn zu entwickeln. In diesem Essay werde ich diesen Versuch diskutieren und dabei feststellen, dass er als Unsinns-Kriterium scheitert. Dabei betrachte ich nur die Interpretation James Conants.
+
+\section{Rekonstruktion des TLP}
+
+Beginnen wir mit einer groben Rekonstruktion des TLP. Conant zufolge sind ein Großteil der Überlegungen des TLP nur eine \enquote{dialektische Vorstufe} zu dessen eigentlicher Position. Ich werde also zuerst die Überlegungen naiv schildern und dann darauf eingehen, inwiefern sie Conant zufolge später aufgehoben werden.
+
+Wittgenstein interessiert sich für ein Kriterium, das zwischen sinnvoller und unsinniger Sprache unterscheidet, weil die Unsinnigkeit einer philosophischen Position für ihn Grund genug ist, sie in folgender Hinsicht zurückzuweisen: Sie soll nicht mehr artikuliert werden und Argumente für oder gegen sie sind hinfällig. Denn so lässt sich am besten erklären, wieso Wittgenstein der Philosophie den Rücken kehrte, nachdem er \enquote{die philosophischen Probleme} \enquote{im Wesentlichen endgültig [löste]}.\autocite[Vgl.][Vorwort]{wittgenstein2016} Zudem schreibt er zum Schluss des TLP explizit: \enquote{Wovon man nicht sprechen kann, darüber muß man schweigen.}\autocite[][7]{wittgenstein2016}
+
+Um herauszufinden, welche Sätze unsinnig sind, untersucht Wittgenstein die Bedingungen der Möglichkeit von Sinn. Dabei vertritt er anfangs, dass alle sinnvolle Sprache nur dadurch möglich ist, dass Sprache bestimmten Strukturen unterliegt, die in in einer formallogischen Idealsprache besonders offensichtlich erkennbar sind. Sinnvolle Sprache besteht aus Namen, die jeweils mit Gegenständen übereinstimmen. Diese Namen müssen in Elementarsätzen miteinander verbunden werden und so stimmen sie mit Sachverhalten überein, in denen Gegenstände miteinander verbunden sind. Diese Struktur zeigt sich beispielsweise in Sätzen wie $aRb$, in denen $a$ und $b$ als Namen funktionieren, die im Satz auf eine bestimmte Art verbunden sind. Sachverhalte können bestehen oder nicht und wenn ein Satzverhalt besteht, ist der Satz, der mit ihm übereinstimmt, wahr. Elementarsätze und komplexe Sätze lassen sich durch Wahrheitsfunktionen wie \enquote{und} und \enquote{oder} zu komplexen Sätzen kombinieren. Dabei legt die Wahrheitsfunktion fest, mit welcher Kombination des Bestehens und nicht-Bestehens von Sachverhalten der resultierende Satz übereinstimmt. Wenn $p$ und $q$ beispielsweise Elementarsätze sind, stimmt $p \wedge q$ nur damit überein, dass der Sachverhalt, der mit $p$ übereinstimmt und der, der mit $q$ übereinstimmt, besteht. $p \vee q$ stimmt dagegen mit dieser Wahrheitsmöglichkeit und noch zwei weiteren überein. \enquote{Sinn} ist nach Wittgenstein nichts weiter als dieses Übereinstimmen und nicht Übereinstimmen. Sätze wie $a \vee a$ oder $a \wedge \sim a$ sind demnach \emph{sinnlos}, weil sie mit allen oder keinen ihrer Wahrheitsmöglichkeiten übereinstimmen. Sätze wie $a \vee \wedge \neg$ oder \enquote{Du sollst nicht töten!} sind \emph{unsinnig}, weil sie sich nicht in Namen, Elementarsätze und Wahrheitsfunktionen zerlegen lassen. Damit sind Wittgensteins Versuche, die Strukturen seiner Idealsprache aufzuweisen, selbst unsinnig. Wittgenstein erkennt das auch an. Er schreibt:
+
+Leiter-Satz...
+
+Doch daraus ergeben sich einige Fragen. Ich werde hier vier Probleme, vier lose Leitersprossen schildern, die dazu führen könnten, dass wir herabstürzen, wenn wir die Leiter unbedacht erklimmen.
+
+\section{4 lose Leitersprossen}
+
+Das erste Problem ergibt sich daraus, dass der Nachweis der Unsinnigkeit einer Position Grund genug ist, sie zurückzuweisen. Daraus folgt aber, dass Wittgensteins eigene Position zurückzuweisen ist. Auf diese Weise ist sein Projekt selbstwiderlegend.
+
+ich weiß nicht, ob ich das zweite reinnehme...
+
+Drittens stellt sich die Frage, wie Wittgenstein durch seinen Unsinn mit uns kommuniziert. Schließlich unterscheiden sich sprachliche Äußerungen, durch die wir kommunizieren und einander verstehen können, eben dadurch von bloßen Geräuschen, dass sie einen Sinn haben. Wenn Wittgensteins Sätze im TLP aber wirklich Unsinn sind, dann können sie nichts kommunizieren. Wir würden die Leiter gar nicht erst herauf kommen.
+
+Das vierte Problem ist, dass Argumentation nur möglich ist, wenn das Argument eine innere logische Struktur hat. Das lässt sich bei deduktiven Argumenten besonders leicht erkennen. Solche Argumente sind in Diskussionen zulässig, weil ihre Konklusionen logisch aus ihren Prämissen folgen. Wittgenstein zufolge unterscheidet sich aber Unsinn von Sinnvollem und Sinnlosem gerade dadurch, dass er keine solche logische Struktur hat. Damit können mit unsinnigen Sätzen keine Argumente formuliert werden. Wir philosophische Positionen aber nur akzeptieren, wenn gute Argumente für sie sprechen. Daher sollten wir Wittgensteins Position zurückweisen.
+
+\section{Conants Lösung}
+
+\textbf{Substanzielle Lesart von Unsinn und Erläuterung und resolute Alternative}
+
+Nach Conant sollen die unsinnigen Sätze des TLP eine bestimmte Art von Erfahrung in der LeserIn hervorbringen. Zuerst wird sie zu einer Theorie von Sprache und Welt verlockt, nach der die Sprache die Welt abbildet, dieses Verhältnis sich aber sprachlich nicht ausdrücken lässt. Die LeserIn wird also erst von der substanziellen Konzeption von Unsinn überzeugt, nach der es unaussprechbare Einsichten gibt. Hier erweckt der TLP den Anschein, dass er aus Argumenten besteht, die Positionen stützen. Dann wird der Unsinn, der die LeserIn zu dieser Konzeption verleitete, aber als logische Kategorien übergreifende Äquivokation aufgezeigt. Dabei wird die Illusion von Sinn, zu der sie verleitet wurde, zerbrochen: Mit dem Unsinn war überhaupt nichts gemeint. So wirft die LeserIn die Leiter um. Sie erkennt den gesamten TLP als Unsinn. Dennoch hat sie sich aber an einer Praxis beteiligt und dabei eine besondere Erfahrung gemacht, die sie verändert hat. Denn jetzt, da sie zuerst getäuscht und dann aufgeklärt wurde, wird sie nicht mehr in die erstere Täuschung zurückfallen.\autocite[Vgl.][421-424]{conant2002}
+
+Wie Conant damit umgeht:
+
+\section{Fazit}
+
+% Literaturverzeichnis
+
+% \nocite{hab_euch_benutzt_aber_nicht_zitiert}
+
+\clearpage
+\printbibliography
+
+% Eigenständigkeitserklärung
+\clearpage
+
+\section*{Eigenständigkeitserklärung}
+
+Hiermit versichere ich, dass ich diese Arbeit mit Ausnahme von dieser Erklärung ausschließlich mit den angegebenen Hilfsmitteln verfasst habe. Alle Passagen, die ich wörtlich oder sinngemäß aus Büchern, Artikeln oder anderen Quellen übernommen habe, habe ich als Zitate kenntlich gemacht. Darüber hinaus versichere ich, dass diese Arbeit nicht schon Gegenstand eines anderen Prüfungsverfahrens gewesen ist.
+
+\end{document}
